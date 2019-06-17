@@ -36,4 +36,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /** Get the messages posted by user */
+    public function messages()
+    {
+        return $this->hasMany('App\Message');
+    }
 }

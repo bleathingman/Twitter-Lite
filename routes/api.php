@@ -13,10 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::middleware('auth.basic')->get('/user', function (Request $request) {
     return $request->user();
 });
 
 // Declare User and Message routes
-Route::apiResource('users', 'API\UserController');
-Route::apiResource('messages', 'API\MessageController');
+Route::apiResource('users', 'API\UserController')->middleware('auth.basic');
+Route::apiResource('messages', 'API\MessageController')->middleware('auth.basic');

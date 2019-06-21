@@ -13,11 +13,11 @@
                 <br/>
                 <form method="POST" action="/messages">
                     @csrf
-                    <textarea class="form-control" @error('content') is-invalid @enderror 
-                        name="content" 
+                    <textarea class="form-control @error('content') is-invalid @enderror"
+                        name="content"
                         size="80"
-                        minlength="1" maxlength="300" 
-                        required 
+                        minlength="1" maxlength="300"
+                        required
                         placeholder="Qu'es-tu en train de faire en ce moment?"
                     ></textarea>
                     <br/>
@@ -26,10 +26,15 @@
                 <br/>
                 <ul class="list-group">
                 @foreach ($messages as $message)
-                    <p>
                     <br/>
-                    <li class="list-group-item">{{ $message->user->name }} : {{ $message->content }}</li>
-                    </p>
+                <div class="media">
+                    <img src="/img/defaultpp.jpg" class="profile-picture mr-3" alt="...">
+                        <div class="media-body">
+                            <h5 class="mt-0">{{ $message->user->name }}</h5>
+                            {{ $message->content }}
+                            </div>
+                        </div>
+                    <br/>
                 @endforeach
                 </ul>
                 </div>

@@ -5,25 +5,33 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Messages</div>
+                <div class="card-header">Liste des messages</div>
 
                 <div class="card-body">
+                <a href="http://localhost:8000/home" class="btn btn-info">Retour</a>
+                <br/>
+                <br/>
                 <form method="POST" action="/messages">
                     @csrf
-                    <input class="@error('content') is-invalid @enderror" 
+                    <textarea class="form-control" @error('content') is-invalid @enderror 
                         name="content" 
                         size="80"
                         minlength="1" maxlength="300" 
                         required 
-                        placeholder="What are you doing right now?"
+                        placeholder="Qu'es-tu en train de faire en ce moment?"
                     ></textarea>
-                    <button type="submit">Envoyer</button>
+                    <br/>
+                    <button type="submit" class="btn btn-primary">Send</button>
                 </form>
+                <br/>
+                <ul class="list-group">
                 @foreach ($messages as $message)
                     <p>
-                    {{ $message->user->name }} : {{ $message->content }}
+                    <br/>
+                    <li class="list-group-item">{{ $message->user->name }} : {{ $message->content }}</li>
                     </p>
                 @endforeach
+                </ul>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace TwitterLite;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -36,4 +36,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /** Get the messages posted by user */
+    public function messages()
+    {
+        return $this->hasMany('TwitterLite\Message');
+    }
 }

@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Twitter Lite'),
 
     /*
     |--------------------------------------------------------------------------
@@ -169,11 +169,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        TwitterLite\Providers\AppServiceProvider::class,
+        TwitterLite\Providers\AuthServiceProvider::class,
+        // TwitterLite\Providers\BroadcastServiceProvider::class,
+        TwitterLite\Providers\EventServiceProvider::class,
+        TwitterLite\Providers\RouteServiceProvider::class,
 
     ],
 

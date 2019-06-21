@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace TwitterLite;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,6 +13,6 @@ class Message extends Model
     /** Get the message author */
     public function user()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('TwitterLite\User');
     }
 }

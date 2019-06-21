@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace TwitterLite\Http\Controllers\API;
 
-use App\Message;
-USE App\Http\Resources\MessageResource;
+use TwitterLite\Message;
+USE TwitterLite\Http\Resources\MessageResource;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use TwitterLite\Http\Controllers\Controller;
 
 class MessageController extends Controller
 {
@@ -34,7 +34,7 @@ class MessageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Message  $message
+     * @param  \TwitterLite\Message  $message
      * @return \Illuminate\Http\Response
      */
     public function show(Message $message)
@@ -46,7 +46,7 @@ class MessageController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Message  $message
+     * @param  \TwitterLite\Message  $message
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Message $message)
@@ -58,7 +58,7 @@ class MessageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Message  $message
+     * @param  \TwitterLite\Message  $message
      * @return \Illuminate\Http\Response
      */
     public function destroy(Message $message)

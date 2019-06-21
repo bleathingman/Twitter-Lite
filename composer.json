@@ -33,7 +33,7 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "TwitterLite\\": "app/"
         },
         "classmap": [
             "database/seeds",

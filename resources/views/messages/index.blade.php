@@ -21,20 +21,23 @@
                         placeholder="Qu'es-tu en train de faire en ce moment?"
                     ></textarea>
                     <br/>
-                    <button type="submit" class="btn btn-primary">Send</button>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
                 </form>
                 <br/>
                 <ul class="list-group">
                 @foreach ($messages as $message)
                     <br/>
-                <div class="media">
-                    <img src="/img/defaultpp.jpg" class="profile-picture mr-3" alt="...">
-                        <div class="media-body">
-                            <h5 class="mt-0">{{ $message->user->name }}</h5>
+                <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="media">
+                        <img src="/img/profile.jpg" class="profile-picture mr-3" alt="...">
+                            <div class="media-body">
+                                <h5 class="mt-0">{{ $message->user->name }}</h5>
                             {{ $message->content }}
                             </div>
-                        </div>
-                    <br/>
+                    </div>
+                </li>
+                </ul>
                 @endforeach
                 </ul>
                 </div>

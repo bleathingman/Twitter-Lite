@@ -13,8 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                
-                    Content de te revoir User, que veut tu faire ?
+                    Content de te revoir {{ Auth::user()->name }}, que veut tu faire ?
                     <br/>
                     <br/>
                     <br/>

@@ -20,3 +20,4 @@ Route::middleware('auth.basic')->get('/user', function (Request $request) {
 // Declare User and Message routes
 Route::apiResource('users', 'API\UserController')->middleware('auth.basic');
 Route::apiResource('messages', 'API\MessageController')->middleware('auth.basic');
+Route::apiResource('profile', 'API\ProfileController')->middleware('auth.basic');

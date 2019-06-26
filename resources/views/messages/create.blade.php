@@ -5,10 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Poster un message</div>
-
                 <div class="card-body">
-                <a href="http://localhost:8000/home" class="btn btn-info">Retour</a>
+                <h3>Poster un message</h3>
+                <br/>
+                <a href="http://localhost:8000/home" class="btn btn-info">← Retour</a>
                 <br/>
                 <br/>
                 <form method="POST" action="/messages">

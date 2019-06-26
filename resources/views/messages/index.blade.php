@@ -5,10 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Liste des messages</div>
-
                 <div class="card-body">
-                <a href="http://localhost:8000/home" class="btn btn-info">Retour</a>
+                <h3>Liste des messages</h3>
+                <br/>
+                <a href="http://localhost:8000/home" class="btn btn-info">← Retour</a>
                 <br/>
                 <br/>
                 <form method="POST" action="/messages">
@@ -24,22 +24,32 @@
                     <button type="submit" class="btn btn-primary">Envoyer</button>
                 </form>
                 <br/>
-                <ul class="list-group">
                 @foreach ($messages as $message)
-                    <br/>
                 <ul class="list-group">
-                <li class="list-group-item">
-                    <div class="media">
+                <div class="shadow-none p-3 mb-5 bg-light rounded">
+                <div class="media">
                         <img src="/img/profile.jpg" class="profile-picture mr-3" alt="...">
                             <div class="media-body">
                                 <h5 class="mt-0">{{ $message->user->name }}</h5>
                             {{ $message->content }}
                             </div>
                     </div>
-                </li>
+                    </div>
                 </ul>
                 @endforeach
-                </ul>
+                <div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Précédent</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Suivant</a></li>
+                        <h5>← WIP<h5/>
+                    </ul>
+                    </nav>
+                    </ul>
+                </div>
                 </div>
             </div>
         </div>

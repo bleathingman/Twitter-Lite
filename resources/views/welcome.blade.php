@@ -13,7 +13,7 @@
         <style>
             html, body {
                 background-color: #37adce;
-                color: #636b6f;
+                color: #ffffff;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -49,7 +49,7 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #ffffff;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                <h1>Un twitter fait par des stagiaires, mais en mieux car il y a un bouton edit !</h1>
+                <h1>Un twitter fait par des stagiaires, mais en mieux car il y a un bouton edit ! (enfin il faudrait qu'on le dévelope d'abord)</h1>
                 </div>
             </div>
         </div>

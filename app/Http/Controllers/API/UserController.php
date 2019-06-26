@@ -5,6 +5,7 @@ namespace TwitterLite\Http\Controllers\API;
 use TwitterLite\Http\Controllers\Controller;
 use TwitterLite\Http\Resources\UserResource;
 use TwitterLite\User;
+use TwitterLite\Auth;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -17,6 +18,13 @@ class UserController extends Controller
     public function index()
     {
         return UserResource::collection(User::all());
+    }
+
+    /**
+     * Display the user profile page.
+     */
+    public function profile(){
+        return view('profile', array('user' => Auth::user()) );
     }
 
     /**

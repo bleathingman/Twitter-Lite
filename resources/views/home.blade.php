@@ -12,13 +12,13 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <h3>Content de te revoir {{ Auth::user()->name }}, que veut tu faire ?</h3>
+                    <h3>Content de te revoir {{ Auth::user()->name }}, que veux tu faire ?</h3>
                     <br/>
                     <div class="container">
                         <div class="row">
                             <div class="col-md">
                                 <div class="card">
-                                    <img src="/img/readmessage.jpg" class="card-img-top" alt="...">
+                                    <img src="/img/readmessage.jpg" class="card-img-top">
                                     <div class="card-body">
                                         <h4 class="card-title">Lire les messages</h4>
                                         <a href="http://localhost:8000/messages" class="btn btn-primary">→</a>
@@ -27,7 +27,7 @@
                             </div>
                             <div class="col-md">
                                 <div class="card">
-                                    <img src="/img/createmessage.jpg" class="card-img-top" alt="...">
+                                    <img src="/img/createmessage.jpg" class="card-img-top">
                                     <div class="card-body">
                                         <h4 class="card-title">Poster un nouveau message</h4>
                                         <a href="http://localhost:8000/messages/create" class="btn btn-primary">→</a>
@@ -38,7 +38,7 @@
                         <div class="row mt-4">
                             <div class="col-md">
                                 <div class="card">
-                                    <img src="/img/viewprofile.jpg" class="card-img-top" alt="...">
+                                    <img src="/img/viewprofile.jpg" class="card-img-top">
                                     <div class="card-body">
                                         <h4 class="card-title">Voir son profil</h4>
                                         <a href="http://localhost:8000/profile" class="btn btn-primary">→</a>
@@ -47,9 +47,9 @@
                             </div>
                             <div class="col-md">
                                 <div class="card">
-                                    <img src="/img/Workinprogress.jpg" class="card-img-top" alt="...">
+                                    <img src="/img/Workinprogress.jpg" class="card-img-top">
                                     <div class="card-body">
-                                        <h4 class="card-title">[WIP]</h4>
+                                        <h4 class="card-title">Voir les Utilisateurs [WIP]</h4>
                                         <a href="WIP" class="btn btn-primary">→</a>
                                     </div>
                                 </div>

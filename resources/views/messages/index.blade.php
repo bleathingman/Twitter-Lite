@@ -26,14 +26,18 @@
                 <br/>
                 @foreach ($messages as $message)
                 <ul class="list-group">
-                <div class="shadow-none p-3 mb-5 bg-light rounded">
-                <div class="media">
-                        <img src="/img/profile.jpg" class="profile-picture mr-3" alt="...">
-                            <div class="media-body">
+                    <div class="shadow-none p-3 mb-5 bg-light rounded">
+                        <div class="media">
+                            @if ($message->user->profile_picture)
+                                <img src="{{ $message->user->profile_picture }}" class="profile-picture mr-3">
+                            @else
+                                <img src="/img/profile.jpg" class="profile-picture mr-3">
+                            @endif
+                            <div class="media-body message">
                                 <h5 class="mt-0">{{ $message->user->name }}</h5>
-                            {{ $message->content }}
+                                <div class="message-content">{{ $message->content }}</div>
                             </div>
-                    </div>
+                        </div>
                     </div>
                 </ul>
                 @endforeach
@@ -45,7 +49,7 @@
                         <li class="page-item"><a class="page-link" href="#">2</a></li>
                         <li class="page-item"><a class="page-link" href="#">3</a></li>
                         <li class="page-item"><a class="page-link" href="#">Suivant</a></li>
-                        <h5>← WIP<h5/>
+                        <h5>[WIP]<h5/>
                     </ul>
                     </nav>
                     </ul>
@@ -55,4 +59,5 @@
         </div>
     </div>
 </div>
+
 @endsection

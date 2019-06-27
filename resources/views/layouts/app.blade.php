@@ -76,10 +76,11 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand">
-                    <img src="/img/logo.png" class="logo-picture mr-3" alt="...">
+                    <img src="/img/logo.png" class="logo-picture mr-3">
                     {{ config('app.name', 'Twitter Lite') }}
                 </a>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                @guest
+                @else
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -93,15 +94,15 @@
                         </li>
                         </ul>
                     </div>
-                    </nav>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                @endguest
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                    
                     </ul>
-
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -109,15 +110,28 @@
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('S\'identifier') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('S\'enregister') }}</a>
                                 </li>
                             @endif
                         @else
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:8000/messages/create">Nouveau message</a>
+                                </li>
+                                </ul>
+                            <div/>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 <!-- <a href="http://localhost:8000/profile" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px;"> -->
-                                    <img src="/img/profile.jpg" style="width:32px; height:32px; top:10px; left:10px; border-radius:50%">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                @if (Auth::user()->profile_picture)
+                                    <img src="{{ Auth::user()->profile_picture }}" class="small-profile-picture mr-3">
+                                @else
+                                    <img src="/img/profile.jpg" class="small-profile-picture mr-3">
+                                @endif
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

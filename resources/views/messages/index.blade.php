@@ -8,7 +8,7 @@
                 <div class="card-body">
                 <h3>Liste des messages</h3>
                 <br/>
-                <a href="http://localhost:8000/home" class="btn btn-info">← Retour</a>
+                <a href="{{ route('home') }}" class="btn btn-info">← Retour</a>
                 <br/>
                 <br/>
                 <form method="POST" action="/messages">
@@ -34,7 +34,7 @@
                                 <img src="/img/profile.jpg" class="profile-picture mr-3">
                             @endif
                             <div class="media-body message">
-                                <h5 class="mt-0">{{ $message->user->name }}</h5>
+                                <h5 class="mt-0"></b>{{ $message->user->name }}</b></h5>
                                 <div class="message-content">{{ $message->content }}</div>
                             </div>
                         </div>

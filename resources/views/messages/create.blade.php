@@ -8,7 +8,7 @@
                 <div class="card-body">
                 <h3>Poster un message</h3>
                 <br/>
-                <a href="http://localhost:8000/home" class="btn btn-info">← Retour</a>
+                <a href="{{ route('home') }}" class="btn btn-info">← Retour</a>
                 <br/>
                 <br/>
                 <form method="POST" action="/messages">

@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/profile', 'ProfileController@index')->name('profile');
-// TODO Route::get('/profile/edit', 'ProfileController@edit')->name('profile.edit');
+Route::get('/profile/edit', 'ProfileController@edit')->name('profile.edit');
+Route::post('/profile', 'ProfileController@update');
 
 Route::resource('/messages', 'MessageController')->middleware('auth');

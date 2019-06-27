@@ -8,7 +8,7 @@
                 <div class="card-body">
                 <h3>Profil</h3>
                 <br/>
-                    <a href="http://localhost:8000/home" class="btn btn-info">← Retour</a>
+                    <a href="{{ route('home') }}" class="btn btn-info">← Retour</a>
                 <br/>
                 <br/>
                 <div class="shadow-none p-3 mb-5 bg-light rounded">
@@ -29,8 +29,8 @@
                     <br/>
                     <h5 class="mt-0"><b>Inscrit le :</b> {{ $user->created_at }}</h5>
                     <br/>
+                    <a href="{{ route('profile.edit') }}" class="btn btn-info">Éditer</a>
                 </div>
-
                 </div>
             </div>
         </div>

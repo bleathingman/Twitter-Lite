@@ -40,17 +40,17 @@
                                 <div class="card">
                                     <img src="/img/viewprofile.jpg" class="card-img-top">
                                     <div class="card-body">
-                                        <h4 class="card-title">Voir son profil</h4>
+                                        <h4 class="card-title">Voir mon profil</h4>
                                         <a href="http://localhost:8000/profile" class="btn btn-primary">→</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md">
                                 <div class="card">
-                                    <img src="/img/Workinprogress.jpg" class="card-img-top">
+                                    <img src="/img/userlist.jpg" class="card-img-top">
                                     <div class="card-body">
-                                        <h4 class="card-title">Voir les Utilisateurs [WIP]</h4>
-                                        <a href="WIP" class="btn btn-primary">→</a>
+                                        <h4 class="card-title">Voir les Utilisateurs</h4>
+                                        <a href="http://localhost:8000/users" class="btn btn-primary">→</a>
                                     </div>
                                 </div>
                             </div>

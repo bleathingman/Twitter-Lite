@@ -19,6 +19,7 @@
                             <img src="/img/profile.jpg" class="big-profile-picture mr-3">
                             @endif
                             <div class="media-body">
+                                @if ($user->id == Auth::user()->id)
                                 <div class="dropdown">
                                     <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,6 +46,7 @@
                                         </form>
                                     </div>
                                 </div>
+                                @endif
                             </div>
                         </div>
                         <br/>
@@ -59,7 +61,9 @@
                         <br/>
                         <h5 class="mt-0"><b>Inscrit le :</b> {{ $user->created_at }}</h5>
                         <br/>
+                        @if ($user->id == Auth::user()->id)
                         <a href="{{ route('profile.edit') }}" class="btn btn-info">Éditer</a>
+                        @endif
                     </div>
                 </div>
             </div>

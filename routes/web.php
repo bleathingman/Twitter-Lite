@@ -23,6 +23,7 @@ Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::get('/profile/edit', 'ProfileController@edit')->name('profile.edit');
 Route::post('/profile', 'ProfileController@update');
 
+Route::resource('/users', 'UserController')->middleware('auth');
 Route::resource('/messages', 'MessageController')->middleware('auth');
 
 Route::post('/avatar', 'AvatarController@upload');

@@ -28,13 +28,17 @@
                 <ul class="list-group">
                     <div class="shadow-none p-3 mb-5 bg-light rounded">
                         <div class="media">
+                            <a class="js-user-profile-link js-nav" href="{{ route('users.show', $message->user) }}">
                             @if ($message->user->profile_picture)
                                 <img src="{{ $message->user->profile_picture }}" class="profile-picture mr-3">
                             @else
                                 <img src="/img/profile.jpg" class="profile-picture mr-3">
                             @endif
+                            </a>
                             <div class="media-body message">
-                                <h5 class="mt-0"></b>{{ $message->user->name }}</b></h5>
+                                <a class="js-user-profile-link js-nav" href="{{ route('users.show', $message->user) }}">
+                                    <h5 class="mt-0"></b>{{ $message->user->name }}</b></h5>
+                                </a>
                                 <div class="message-content">{{ $message->content }}</div>
                             </div>
                         </div>

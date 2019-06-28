@@ -14,12 +14,6 @@
                     <div class="shadow-none p-3 mb-5 bg-light rounded">
                         <form method="POST" action="/profile">
                             @csrf
-                            <h5 class="mt-0">Photo de Profil</h5>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" name="profile_picture"
-                                    value="{{ Auth::user()->profile_picture }}">
-                            </div>
-
                             <h5 class="mt-0">Pseudo</h5>
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" name="name" value="{{ Auth::user()->name }}">

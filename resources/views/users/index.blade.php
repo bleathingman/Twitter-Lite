@@ -6,55 +6,44 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
-                <h3>Liste des utilisateurs</h3>
-                <br/>
-                <a href="{{ route('home') }}" class="btn btn-info">← Retour</a>
-                <br/>
-                <br/>
-                @foreach ($users as $user)
-                <ul class="list-group">
-                    <div class="shadow-none p-3 mb-5 bg-light rounded">
-                        <div class="media">
-                            @if ($user->profile_picture)
+                    <h3>Liste des utilisateurs</h3>
+                    <br />
+                    <a href="{{ route('home') }}" class="btn btn-info">← Retour</a>
+                    <br />
+                    <br />
+                    @foreach ($users as $user)
+                    <ul class="list-group">
+                        <div class="shadow-none p-3 mb-5 bg-light rounded">
+                            <div class="media">
+                                @if ($user->profile_picture)
                                 <img src="{{ $user->profile_picture }}" class="profile-picture mr-3">
-                            @else
+                                @else
                                 <img src="/img/profile.jpg" class="profile-picture mr-3">
-                            @endif
-                            <div class="media-body message">
-                                <h4 class="mt-0"></b>{{ $user->name }}</b></h4>
-                                <div class="message-content">ID : {{ $user->id }}</div>
+                                @endif
+                                <div class="media-body message">
+                                    <a class="js-user-profile-link js-nav" href="{{ route('users.show', $user) }}">
+                                        <h5 class="mt-0"></b>{{ $user->name }}</b></h5>
+                                    </a>
+                                    <div class="message-content">ID : {{ $user->id }}</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </ul>
-                @endforeach
-                <div>
-                <nav aria-label="Page navigation">
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#">Précédent</a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Suivant</a></li>
-                        <h5>[WIP]<h5/>
                     </ul>
-                    </nav>
-                    </ul>
-                </div>
-                </div>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif
+@if ($errors->any())
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
 </div>
 @endsection

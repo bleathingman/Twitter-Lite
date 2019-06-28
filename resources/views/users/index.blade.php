@@ -29,24 +29,13 @@
                 </ul>
                 @endforeach
                 <div>
-                <nav aria-label="Page navigation">
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#">Précédent</a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Suivant</a></li>
-                        <h5>[WIP]<h5/>
-                    </ul>
-                    </nav>
-                    </ul>
+                {{ $users->links() }}
                 </div>
                 </div>
                 </div>
             </div>
         </div>
     </div>
-
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>

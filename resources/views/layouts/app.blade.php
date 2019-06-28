@@ -93,6 +93,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="http://localhost:8000/messages">Messages</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:8000/users">Utilisateurs</a>
+                        </li>
                         </ul>
                     </div>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">

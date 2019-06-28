@@ -32,16 +32,18 @@
                                     @endif
                                 </a>
                                 <div class="media-body message">
-                                    <a class="js-user-profile-link js-nav" href="{{ route('users.show', $message->user) }}">
+                                    <a class="js-user-profile-link js-nav"
+                                        href="{{ route('users.show', $message->user) }}">
                                         <h5 class="mt-0"></b>{{ $message->user->name }}</b></h5>
                                     </a>
                                     <div class="message-content">{{ $message->content }}</div>
                                 </div>
                             </div>
                         </div>
-                    </ul>
-                    @endforeach
                 </div>
+                </ul>
+                @endforeach
+                {{ $messages->links() }}
             </div>
         </div>
     </div>

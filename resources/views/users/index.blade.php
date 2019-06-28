@@ -28,12 +28,16 @@
                                 </div>
                             </div>
                         </div>
-                    </ul>
-                    @endforeach
+                </div>
+                </ul>
+                @endforeach
+                <div>
+                    {{ $users->links() }}
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 @if ($errors->any())
@@ -45,5 +49,6 @@
     </ul>
 </div>
 @endif
+
 </div>
 @endsection

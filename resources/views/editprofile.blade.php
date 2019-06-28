@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
-                    <h3>Profil</h3>
+                    <h3>Modifier le profil</h3>
                     <br />
                     <a href="{{ route('profile') }}" class="btn btn-info">← Retour</a>
                     <br />

@@ -2,11 +2,12 @@
 
 namespace TwitterLite\Http\Controllers\API;
 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use TwitterLite\Http\Controllers\Controller;
 use TwitterLite\Http\Resources\UserResource;
 use TwitterLite\User;
-use TwitterLite\Auth;
-use Illuminate\Http\Request;
+use Illuminate\Auth\Access\AuthorizationException;
 
 class UserController extends Controller
 {
@@ -18,13 +19,6 @@ class UserController extends Controller
     public function index()
     {
         return UserResource::collection(User::all());
-    }
-
-    /**
-     * Display the user profile page.
-     */
-    public function profile(){
-        return view('profile', array('user' => Auth::user()) );
     }
 
     /**
@@ -59,6 +53,9 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        if ($user != Auth::user()) {
+            throw new AuthorizationException();
+        }
         $user->update($request->input());
         return new UserResource($user);
     }
@@ -71,6 +68,6 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        $user->delete();
+        throw new AuthorizationException();
     }
 }

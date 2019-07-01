@@ -34,8 +34,13 @@
                                 <div class="media-body message">
                                     <a class="js-user-profile-link js-nav"
                                         href="{{ route('users.show', $message->user) }}">
-                                        <h5 class="mt-0"></b>{{ $message->user->name }}</b></h5>
+                                        <h5 class="mt-0"><b>{{ $message->user->name }}</b></h5>
                                     </a>
+                                    <h6><i>{{ $message->created_at }}</i>
+                                        @if ($message->created_at != $message->updated_at)
+                                        <br /><i>Édité à : {{ $message->updated_at }}</i>
+                                        @endif
+                                    </h6>
                                     <div class="message-content">{{ $message->content }}</div>
                                 </div>
                             </div>
@@ -49,4 +54,3 @@
     </div>
 </div>
 @endsection
-    

@@ -20,8 +20,8 @@
                         <button type="submit" class="btn btn-primary">Envoyer</button>
                     </form>
                     <br />
-                    @foreach ($messages as $message)
                     <ul class="list-group">
+                        @foreach ($messages as $message)
                         <div class="shadow-none p-3 mb-5 bg-light rounded">
                             <div class="media">
                                 <a class="js-user-profile-link js-nav" href="{{ route('users.show', $message->user) }}">
@@ -40,13 +40,13 @@
                                 </div>
                             </div>
                         </div>
+                        @endforeach
+                    </ul>
+                    {{ $messages->links() }}
                 </div>
-                </ul>
-                @endforeach
-                {{ $messages->links() }}
             </div>
         </div>
     </div>
 </div>
-
 @endsection
+    

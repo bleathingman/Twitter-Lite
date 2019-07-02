@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                <h1>Un twitter fait par des stagiaires, mais en mieux car il y a un bouton edit ! (enfin il faudrait qu'on le dévelope d'abord)</h1>
+                <h1>Un twitter fait par des stagiaires, mais en mieux car il y a un bouton edit !</h1>
                 </div>
             </div>
         </div>

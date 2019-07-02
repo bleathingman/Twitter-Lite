@@ -50,9 +50,34 @@
                             </div>
                             <br />
                             @if ($message->user == Auth::user())
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button-sm" class="btn btn-info">Supprimer</button>
-                                <button type="button-sm" class="btn btn-info">Éditer</button>
+                            <div class="btn-group" role="group">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#exampleModal">
+                                        Supprimer
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <form method="POST" action="{{ route('messages.destroy', $message) }}">
+                                                    @method('DELETE')
+                                                    @csrf
+                                                    <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Supprimer Le message ?</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                                                        <button type="submit" class="btn btn-danger">Supprimer</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <a href="{{ route('messages.edit', $message) }}" class="btn btn-sm btn-info">Editer</a>
                             </div>
                             @endif
                         </div>

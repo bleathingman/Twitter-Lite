@@ -21,7 +21,7 @@
                                     <img src="/img/readmessage.jpg" class="card-img-top">
                                     <div class="card-body">
                                         <h4 class="card-title">Lire les messages</h4>
-                                        <a href="http://localhost:8000/messages" class="btn btn-primary">→</a>
+                                        <a href="{{ route('messages.index') }}" class="btn btn-primary">→</a>
                                     </div>
                                 </div>
                             </div>
@@ -30,7 +30,7 @@
                                     <img src="/img/createmessage.jpg" class="card-img-top">
                                     <div class="card-body">
                                         <h4 class="card-title">Poster un nouveau message</h4>
-                                        <a href="http://localhost:8000/messages/create" class="btn btn-primary">→</a>
+                                        <a href="{{ route('messages.create') }}" class="btn btn-primary">→</a>
                                     </div>
                                 </div>
                             </div>
@@ -41,7 +41,7 @@
                                     <img src="/img/viewprofile.jpg" class="card-img-top">
                                     <div class="card-body">
                                         <h4 class="card-title">Voir mon profil</h4>
-                                        <a href="http://localhost:8000/profile" class="btn btn-primary">→</a>
+                                        <a href="{{ route('profile') }}" class="btn btn-primary">→</a>
                                     </div>
                                 </div>
                             </div>

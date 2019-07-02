@@ -5,6 +5,7 @@ namespace TwitterLite\Http\Controllers;
 use TwitterLite\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Auth\Access\AuthorizationException;
 
 class MessageController extends Controller
 {
@@ -68,7 +69,11 @@ class MessageController extends Controller
      */
     public function edit(Message $message)
     {
-        //
+        if ($message->user != Auth::user()) {
+            throw new AuthorizationException();
+        }
+
+        return view('messages.edit', ['message' => $message]);
     }
 
     /**
@@ -80,7 +85,19 @@ class MessageController extends Controller
      */
     public function update(Request $request, Message $message)
     {
-        //
+        if ($message->user != Auth::user()) {
+            throw new AuthorizationException();
+        }
+
+        $request->validate([
+            'content' => 'required|max:300',
+        ]);
+
+        $message->content = $request->input('content');
+
+        $message->save();
+    
+        return redirect()->route('messages.index');
     }
 
     /**
@@ -91,6 +108,12 @@ class MessageController extends Controller
      */
     public function destroy(Message $message)
     {
-        //
+        if ($message->user != Auth::user()) {
+            throw new AuthorizationException();
+        }
+
+        $message->delete();
+
+        return redirect()->route('messages.index');
     }
 }

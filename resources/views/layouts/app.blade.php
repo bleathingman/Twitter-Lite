@@ -88,13 +88,13 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="http://localhost:8000/home">Home</a>
+                            <a class="nav-link" href="{{ route('home') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="http://localhost:8000/messages">Messages</a>
+                            <a class="nav-link" href="{{ route('messages.index') }}">Messages</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="http://localhost:8000/users">Utilisateurs</a>
+                            <a class="nav-link" href="{{ route('users.index') }}">Utilisateurs</a>
                         </li>
                         </ul>
                     </div>
@@ -124,7 +124,7 @@
                             <div class="collapse navbar-collapse" id="navbarNav">
                                 <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="http://localhost:8000/messages/create">Nouveau message</a>
+                                    <a class="nav-link" href="{{ route('messages.create') }}">Nouveau message</a>
                                 </li>
                                 </ul>
                             <div/>

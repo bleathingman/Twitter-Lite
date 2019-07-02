@@ -37,16 +37,24 @@
                                         <h5 class="mt-0"><b>{{ $message->user->name }}</b></h5>
                                     </a>
                                     <div class="float-right">
-                                        <div class="p-2 bd-highlight"><h6><i>{{ $message->created_at }}</i>
-                                        @if ($message->created_at != $message->updated_at)
-                                        <br /><i>Édité à : {{ $message->updated_at }}</i>
-                                        @endif
-                                    </div>
+                                        <div class="p-2 bd-highlight">
+                                            <h6><i>{{ $message->created_at }}</i>
+                                                @if ($message->created_at != $message->updated_at)
+                                                <br /><i>Édité à : {{ $message->updated_at }}</i>
+                                                @endif
+                                        </div>
                                     </div>
                                     </h6>
                                     <div class="message-content">{{ $message->content }}</div>
                                 </div>
                             </div>
+                            <br />
+                            @if ($message->user == Auth::user())
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button-sm" class="btn btn-info">Supprimer</button>
+                                <button type="button-sm" class="btn btn-info">Éditer</button>
+                            </div>
+                            @endif
                         </div>
                         @endforeach
                     </ul>

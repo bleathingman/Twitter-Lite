@@ -52,7 +52,9 @@
                         <br />
                         <br />
                         <h5 class="mt-0"><b>Pseudo :</b> {{ $user->name }} &nbsp; <b>ID :</b> {{ $user->id }}</h5>
-                        <br />
+                        <br/>
+                        <h5 class="mt-0"><b>Bio :</b> {{ $user->bio }}</h5>
+                        <br/>
                         <h5 class="mt-0"><b>E-mail :</b> {{ $user->email }}</h5>
                         <br />
                         <h5 class="mt-0"><b>Date de naissance :</b> {{ $user->birthdate }}</h5>

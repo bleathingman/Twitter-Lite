@@ -66,11 +66,12 @@ class ProfileController extends Controller
         //         ->withInput(Input::except('password'));
         // } else {
             // store
+
             $user = Auth::user();
             $user->name             = $request->input('name');
+            $user->bio              = $request->input('bio');
             $user->email            = $request->input('email');
             // TODO $user->password         = $request->input('password');
-            $user->profile_picture  = $request->input('profile_picture');
             $user->city             = $request->input('city');
             $user->birthdate        = $request->input('birthdate');
             

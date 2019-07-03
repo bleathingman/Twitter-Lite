@@ -18,6 +18,12 @@
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" name="name" value="{{ Auth::user()->name }}">
                             </div>
+
+                            <h5 class="mt-0">Bio</h5>
+                            <div class="form-group mb-3">
+                                <textarea class="form-control" name="bio" cols="80" minlength="0" maxlength="500" rows="3">{{ Auth::user()->bio }}</textarea>
+                            </div>
+
                             <h5 class="mt-0">Adresse e-mail</h5>
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" name="email" value="{{ Auth::user()->email }}">
@@ -40,7 +46,6 @@
             </div>
         </div>
     </div>
-
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>

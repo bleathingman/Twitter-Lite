@@ -1,8 +1,32 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="media">
+                        <div class="media">
+                            @if (Auth::user()->profile_picture)
+                            <img src="{{ Auth::user()->profile_picture }}" class="profile-picture mr-3">
+                            @else
+                            <img src="/img/profile.jpg" class="profile-picture mr-3">
+                            @endif
+                            <div class="media-body message">
+                                <a class="js-user-profile-link js-nav" href="{{ route('profile') }}">
+                                    <h5 class="mt-0"><b>{{ Auth::user()->name }}</b></h5>
+                                </a>
+                                <h5 class="mt-0"><b>ID :</b> {{ Auth::user()->id }}</h5>
+                                <h5 class="mt-0"><b>Inscit le :</b> {{ Auth::user()->created_at }}</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="mt-0"><b>Bio :</b> {{ Auth::user()->bio }}</h5>
+                </div>
+            </div>
+        </div>
         <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
@@ -25,5 +49,4 @@
             </div>
         </div>
     </div>
-</div>
-@endsection
+    @endsection

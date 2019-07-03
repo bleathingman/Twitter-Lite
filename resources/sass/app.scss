@@ -1,0 +1,30 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.logo-picture {
+    width: 30px;
+}
+
+.profile-picture {
+    width: 64px;
+    border-radius: 50%;
+}
+.small-profile-picture {
+    width: 32px;
+    border-radius: 50%;
+}
+.big-profile-picture {
+    width: 128px;
+    border-radius: 50%;
+}
+
+.message {
+    white-space: pre-wrap;
+    overflow: auto;
+}

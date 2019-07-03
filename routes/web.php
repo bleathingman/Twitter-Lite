@@ -25,5 +25,6 @@ Route::post('/profile', 'ProfileController@update');
 
 Route::resource('/users', 'UserController')->middleware('auth');
 Route::resource('/messages', 'MessageController')->middleware('auth');
+Route::middleware('auth')->get('/users/{user}/messages', 'UserController@messages')->name('users.messages');
 
 Route::post('/avatar', 'AvatarController@upload');

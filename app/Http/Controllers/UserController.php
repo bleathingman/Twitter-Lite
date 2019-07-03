@@ -3,6 +3,7 @@
 namespace TwitterLite\Http\Controllers;
 
 use TwitterLite\User;
+use TwitterLite\Message;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -83,5 +84,14 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         //
+    }
+
+    /**
+     * Show the messages for a given user.
+     */
+    public function messages(User $user) {
+        $messages = $user->messages()->orderBy('created_at', 'desc')->paginate(15);
+
+        return view('users.messages', ['user' => $user, 'messages' => $messages]);
     }
 }

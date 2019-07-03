@@ -7,10 +7,10 @@
             <div class="card">
                 <div class="card-body">
                     <h3>Profil</h3>
-                    <br/>
+                    <br />
                     <a href="{{ route('home') }}" class="btn btn-info">← Retour</a>
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
                     <div class="shadow-none p-3 mb-5 bg-light rounded">
                         <div class="media">
                             @if ($user->profile_picture)
@@ -28,7 +28,7 @@
                                     <div class="dropdown-menu">
                                         <form method="POST" action="/avatar" enctype="multipart/form-data">
                                             @csrf
-                                            <br/>
+                                            <br />
                                             <input type="file" class="custom-file-input" id="avatar" name="avatar"
                                                 required>
                                             <label class="custom-file-label" for="avatar">Choisis un fichier</label>
@@ -49,21 +49,24 @@
                                 @endif
                             </div>
                         </div>
-                        <br/>
-                        <br/>
+                        <br />
+                        <br />
                         <h5 class="mt-0"><b>Pseudo :</b> {{ $user->name }} &nbsp; <b>ID :</b> {{ $user->id }}</h5>
-                        <br/>
+                        <br />
                         <h5 class="mt-0"><b>E-mail :</b> {{ $user->email }}</h5>
-                        <br/>
+                        <br />
                         <h5 class="mt-0"><b>Date de naissance :</b> {{ $user->birthdate }}</h5>
-                        <br/>
+                        <br />
                         <h5 class="mt-0"><b>Ville :</b> {{ $user->city }}</h5>
-                        <br/>
+                        <br />
                         <h5 class="mt-0"><b>Inscrit le :</b> {{ $user->created_at }}</h5>
-                        <br/>
-                        @if ($user->id == Auth::user()->id)
-                        <a href="{{ route('profile.edit') }}" class="btn btn-info">Éditer</a>
-                        @endif
+                        <br />
+                        <div class="btn-group" role="group">
+                            <a  href="{{ route('users.messages', $user) }}" class="btn btn-info">Listes des messages</a>
+                            @if ($user->id == Auth::user()->id)
+                            <a href="{{ route('profile.edit') }}" class="btn btn-info">Éditer</a>
+                            @endif
+                        </div>
                     </div>
                 </div>
             </div>

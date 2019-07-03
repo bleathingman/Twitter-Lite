@@ -67,6 +67,15 @@ class ProfileController extends Controller
         // } else {
             // store
 
+            $request->validate([
+                'bio' => 'required|max:500',
+            ]);
+            
+            $request->validate([
+                'city' => 'required|max:60',
+            ]);
+
+    
             $user = Auth::user();
             $user->name             = $request->input('name');
             $user->bio              = $request->input('bio');

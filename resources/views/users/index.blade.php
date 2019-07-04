@@ -48,7 +48,7 @@
                                     <a class="js-user-profile-link js-nav" href="{{ route('users.show', $user) }}">
                                         <h5 class="mt-0"><b>{{ $user->name }}</b></h5>
                                     </a>
-                                    <div class="message-content">ID : {{ $user->id }}</div>
+                                    <div class="message-content">{{ $user->bio }}</div>
                                 </div>
                             </div>
                         </div>

@@ -19,11 +19,11 @@
                                     <h5 class="mt-0"><b>{{ Auth::user()->name }}</b></h5>
                                 </a>
                                 <h5 class="mt-0"><b>ID :</b> {{ Auth::user()->id }}</h5>
-                                <h5 class="mt-0"><b>Inscit le :</b> {{ Auth::user()->created_at }}</h5>
+                                <h5 class="mt-0"></h5>
                             </div>
                         </div>
                     </div>
-                    <h5 class="mt-0"><b>Bio :</b> {{ Auth::user()->bio }}</h5>
+                    <h5 class="mt-0">{{ Auth::user()->bio }}</h5>
                 </div>
             </div>
         </div>

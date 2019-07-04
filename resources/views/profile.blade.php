@@ -52,9 +52,9 @@
                         <br />
                         <br />
                         <h5 class="mt-0"><b>Pseudo :</b> {{ $user->name }} &nbsp; <b>ID :</b> {{ $user->id }}</h5>
-                        <br/>
+                        <br />
                         <h5 class="mt-0"><b>Bio :</b> {{ $user->bio }}</h5>
-                        <br/>
+                        <br />
                         <h5 class="mt-0"><b>E-mail :</b> {{ $user->email }}</h5>
                         <br />
                         <h5 class="mt-0"><b>Date de naissance :</b> {{ $user->birthdate }}</h5>
@@ -64,7 +64,7 @@
                         <h5 class="mt-0"><b>Inscrit le :</b> {{ $user->created_at }}</h5>
                         <br />
                         <div class="btn-group" role="group">
-                            <a  href="{{ route('users.messages', $user) }}" class="btn btn-info">Listes des messages</a>
+                            <a href="{{ route('users.messages', $user) }}" class="btn btn-info">Listes des messages</a>
                             @if ($user->id == Auth::user()->id)
                             <a href="{{ route('profile.edit') }}" class="btn btn-info">Éditer</a>
                             @endif

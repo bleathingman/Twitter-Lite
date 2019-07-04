@@ -8,12 +8,12 @@
             <div class="card">
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
                     @endif
                     <h3>Content de te revoir {{ Auth::user()->name }}, que veux tu faire ?</h3>
-                    <br/>
+                    <br />
                     <div class="container">
                         <div class="row">
                             <div class="col-md">

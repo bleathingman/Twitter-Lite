@@ -1,8 +1,8 @@
 @if ($messages->count() == 0)
 <div class="shadow-none p-3 mb-5 bg-light rounded">
-<h4>Aucun message, c'est le début d'une grande aventure !</h4>
-<br />
-<pre>                                   /\
+    <h4>Aucun message, c'est le début d'une grande aventure !</h4>
+    <br />
+    <pre>                                   /\
                               /\  //\\
                        /\    //\\///\\\        /\
                       //\\  ///\////\\\\  /\  //\\

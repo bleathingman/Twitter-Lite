@@ -21,7 +21,8 @@
 
                             <h5 class="mt-0">Bio</h5>
                             <div class="form-group mb-3">
-                                <textarea class="form-control" name="bio" cols="80" minlength="0" maxlength="500" rows="3">{{ Auth::user()->bio }}</textarea>
+                                <textarea class="form-control" name="bio" cols="80" minlength="0" maxlength="500"
+                                    rows="3">{{ Auth::user()->bio }}</textarea>
                             </div>
 
                             <h5 class="mt-0">Adresse e-mail</h5>
@@ -31,7 +32,8 @@
 
                             <h5 class="mt-0">Date de naissance</h5>
                             <div class="input-group mb-3">
-                                <input type="date" class="form-control" name="birthdate" value="{{ Auth::user()->birthdate }}">
+                                <input type="date" class="form-control" name="birthdate"
+                                    value="{{ Auth::user()->birthdate }}">
                             </div>
 
                             <h5 class="mt-0">Ville</h5>

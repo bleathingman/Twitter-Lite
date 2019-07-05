@@ -68,11 +68,11 @@ class ProfileController extends Controller
             // store
 
             $request->validate([
-                'bio' => 'required|max:500',
+                'bio' => 'max:500',
             ]);
             
             $request->validate([
-                'city' => 'required|max:60',
+                'city' => 'max:60',
             ]);
 
     

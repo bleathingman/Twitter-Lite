@@ -148,6 +148,9 @@
                                     <a class="dropdown-item" href="{{ route('profile') }}">
                                         {{ __('Profil') }}
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('about') }}">
+                                        {{ __('À propos') }}
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Déconnexion') }}

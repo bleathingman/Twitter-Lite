@@ -28,3 +28,5 @@ Route::resource('/messages', 'MessageController')->middleware('auth');
 Route::middleware('auth')->get('/users/{user}/messages', 'UserController@messages')->name('users.messages');
 
 Route::post('/avatar', 'AvatarController@upload');
+
+Route::get('/about', 'AboutController@index')->name('about');

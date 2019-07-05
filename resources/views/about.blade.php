@@ -20,11 +20,11 @@
                         <h5>- Réaliser avec le framework <a href="https://laravel.com/">Laravel 5.8</a></h5>
                         <h5>- Coder avec <a href="https://code.visualstudio.com/">Visual Studio Code</a></h5>
                         <h5>- Style graphique réaliser avec <a href="https://getbootstrap.com/">Bootstrap 4.3</a></h5>
-                        <h5>- Base de donnée <a href="https://www.mysql.com/fr/">MySQL</a></h5>
-                        <h5>- Serveur de developement <a href="https://laragon.org/">laragon</a></h5>
-                        <h5>- Serveur de déploiment <a href="https://localtunnel.github.io/www/">Localtunnel</a></h5>
+                        <h5>- Base de données : <a href="https://www.mysql.com/fr/">MySQL</a></h5>
+                        <h5>- Serveur de developement : <a href="https://laragon.org/">Laragon</a></h5>
+                        <h5>- Serveur de déploiment : <a href="https://localtunnel.github.io/www/">Localtunnel</a></h5>
                         <br>
-                        <h5>Un grand merci à notre maître de stage sans qui tout cela aurait été imposible.<h5>
+                        <h5>Un grand merci à notre maître de stage sans qui tout cela aurait été impossible !<h5>
                         <br/>
                         <a href="https://github.com/Silinox0/Twitter-Lite" class="btn btn-primary">Git Hub</a>
                         <br/>

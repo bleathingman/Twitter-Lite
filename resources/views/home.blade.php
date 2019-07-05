@@ -50,7 +50,7 @@
                                     <img src="/img/userlist.jpg" class="card-img-top">
                                     <div class="card-body">
                                         <h4 class="card-title">Voir les Utilisateurs</h4>
-                                        <a href="http://localhost:8000/users" class="btn btn-primary">→</a>
+                                        <a href="{{ route('users.index') }}" class="btn btn-primary">→</a>
                                     </div>
                                 </div>
                             </div>
